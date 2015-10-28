@@ -161,6 +161,14 @@ case "$DEVICE" in
             -e 's block/platform/msm_sdcc.1/by-name/persist mmcblk0p14 ' \
             "$@"
         ;;
+    "find7s")
+        sed -i \
+            -e 's block/platform/msm_sdcc.1/by-name/modem mmcblk0p1 ' \
+            -e 's block/platform/msm_sdcc.1/by-name/persist mmcblk0p16 ' \
+            -e 's block/platform/msm_sdcc.1/by-name/system mmcblk0p14 ' \
+            -e 's block/platform/msm_sdcc.1/by-name/userdata mmcblk0p15 ' \
+            "$@"
+        ;;
     *)
 	cat <<EOF
 
